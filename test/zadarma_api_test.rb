@@ -17,7 +17,7 @@ class ZadarmaApiTest < Minitest::Test
   end
 
   def test_it_makes_succesfull_post_query
-    response = client.call '/v1/sms/send/', 'POST', { number: '+380919347255',
+    response = client.call '/v1/sms/send/', 'POST', { number: '380919347255',
                                                       message: 'Hello! there ='}
 
     assert_equal 'success', JSON.parse(response.body)['status']
