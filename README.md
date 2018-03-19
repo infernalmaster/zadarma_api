@@ -22,8 +22,10 @@ Or install it yourself as:
 
 ```ruby
 client = ZadarmaApi::Client.new(ZADARMA_KEY, ZADARMA_SECRET)
-response = client.call '/v1/sms/send/', 'POST', { number: '+380919347255', message: 'Hello! there ='}
+response = client.call '/v1/sms/send/', 'POST', { number: '380919347255', message: 'Hello! there ='}
 ```
+
+**`number` should contain only digits (don't use `+` prefix)**
 
 So `response` is just raw [RestClient::Response](https://github.com/rest-client/rest-client) and you can parse it:
 
